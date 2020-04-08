@@ -16,14 +16,14 @@ Start:
 	mov	di,	offset mat
 	mov	cx,	M
 	xor	eax, eax
-	xor ebx, ebx
+	xor	ebx, ebx
 MatLoop:
 	push	cx
 	mov	cx, N
 RowLoop:
 	sal	cx, 1
-	mov si,	di
-	add si, cx
+	mov	si,	di
+	add	si, cx
 	lea	bx, [si]	;bx = max index in row + 1
 	sar	cx, 1
 	mov	ax,	[di]		;ax = min (first element in row)
@@ -41,7 +41,7 @@ L2:
 	loop	MatLoop
 	
 	xor	eax, eax
-	mov cx, Len
+	mov	cx, Len
 	mov	si, 0
 Output:
 	mov	ax, [mat + si]
