@@ -11,10 +11,10 @@
 .code
 Start:
 	mov	ax, @data
-	mov	ds,	ax
+	mov	ds, ax
 	mov	es, ax
-	mov	di,	offset mat
-	mov	cx,	M
+	mov	di, offset mat
+	mov	cx, M
 	xor	eax, eax
 	xor	ebx, ebx
 MatLoop:
@@ -22,16 +22,16 @@ MatLoop:
 	mov	cx, N
 RowLoop:
 	sal	cx, 1
-	mov	si,	di
+	mov	si, di
 	add	si, cx
 	lea	bx, [si]	;bx = max index in row + 1
 	sar	cx, 1
-	mov	ax,	[di]		;ax = min (first element in row)
+	mov	ax, [di]		;ax = min (first element in row)
 L1:
 	sub	bx, 2			;moving along the row
-	cmp	ax,	[bx]
+	cmp	ax, [bx]
 	jl	L2				;if min <= [bx] element
-	xchg	ax,	[bx]	;if min>[bx] -> swap
+	xchg	ax, [bx]	;if min>[bx] -> swap
 L2:
 	cmp	bx, di
 	jnz	L1				;if iteration didn't end
