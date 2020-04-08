@@ -7,7 +7,7 @@
 	Len	equ	M*N
 	mat	dw	4,7,1,3
 		dw	3,32767,-127,0
-		dw	127,-32768,65,1
+		dw	127,-32768,127,1
 .code
 Start:
 	mov	ax, @data
@@ -30,7 +30,7 @@ RowLoop:
 L1:
 	sub	bx, 2			;moving along the row
 	cmp	ax, [bx]
-	jl	L2				;if min <= [bx] element
+	jle	L2				;if min <= [bx] element
 	xchg	ax, [bx]	;if min>[bx] -> swap
 L2:
 	cmp	bx, di
