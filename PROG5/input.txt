@@ -1,0 +1,15 @@
+1 2 3 4 5 6
+01, 02, 03, 04, 05
+  a  b  c  d  e  f
+A;B;C;D;E;F;
+London is the capital of Great Britain
+   I   love   assembly   
+A night, a street, a lamp, a drugstore
+A meaningless and dismal light
+A quarter century outpours
+It’s all the same; No chance to flight;
+You’d die and rise anew, begotten;
+All would repeat as ever might:
+The street, the icy rippled water,
+The store, the lamp, the lonely night;
+
